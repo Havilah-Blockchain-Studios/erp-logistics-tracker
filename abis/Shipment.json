@@ -1,0 +1,191 @@
+{
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "shipmentId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "origin",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "destination",
+            "type": "string"
+          }
+        ],
+        "name": "ShipmentCreated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "shipmentId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "enum Shipment.ShipmentStatus",
+            "name": "status",
+            "type": "uint8"
+          }
+        ],
+        "name": "ShipmentUpdated",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_origin",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_destination",
+            "type": "string"
+          }
+        ],
+        "name": "createShipment",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getActiveShipments",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_shipmentId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getShipment",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "origin",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "destination",
+                "type": "string"
+              },
+              {
+                "internalType": "enum Shipment.ShipmentStatus",
+                "name": "status",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Shipment.ShipmentDetails",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getTotalShipments",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "shipments",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "origin",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "destination",
+            "type": "string"
+          },
+          {
+            "internalType": "enum Shipment.ShipmentStatus",
+            "name": "status",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_shipmentId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "enum Shipment.ShipmentStatus",
+            "name": "_status",
+            "type": "uint8"
+          }
+        ],
+        "name": "updateShipmentStatus",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ]
+}
